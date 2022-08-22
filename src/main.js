@@ -7,7 +7,7 @@ Vue.config.productionTip = false
 import VueRouter from 'vue-router'
 Vue.use(VueRouter);
 
-import HelloWorld from './components/HelloWorld.vue'
+import LoginVue from './components/LoginVue.vue'
 import BusquedaVue from './components/BusquedaVue.vue'
 
 const router = new VueRouter({
@@ -17,7 +17,7 @@ const router = new VueRouter({
   {
     path:'/logins',
     name:'login',
-    component:HelloWorld
+    component:LoginVue
   },
   {
     path:'/busquedas',

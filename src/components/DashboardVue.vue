@@ -1,6 +1,7 @@
 <template>
   <v-app id="inspire">
     <v-navigation-drawer
+      class="deep-purple lighten-3"
       v-model="drawer"
       app
     >
@@ -47,7 +48,7 @@
       <v-toolbar-title>Ugel-BuResol 1.0</v-toolbar-title>
     </v-app-bar>
     
-    <v-main>
+    <v-main class="indigo lighten-3">
       
     </v-main>
   </v-app>
