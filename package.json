@@ -39,7 +39,11 @@
     "parserOptions": {
       "parser": "@babel/eslint-parser"
     },
-    "rules": {}
+    "rules": {
+      "no-unused-vars": "off",
+      "vue/no-unused-components": "off",
+      "vue/no-multiple-template-root": "off"
+    }
   },
   "browserslist": [
     "> 1%",
