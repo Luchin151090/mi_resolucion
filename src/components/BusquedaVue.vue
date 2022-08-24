@@ -1,22 +1,28 @@
 <template>
+<v-layout align-start>
+<v-flex>
   <v-card fluid>
     <v-card-title>
-      Nutrition
+      Resoluciones
       <v-spacer></v-spacer>
       <v-text-field
         v-model="search"
         append-icon="mdi-magnify"
-        label="Search"
+        label="Buscar resoluciones"
         single-line
         hide-details
       ></v-text-field>
     </v-card-title>
     <v-data-table
+      class="green lighten-3"
       :headers="headers"
       :items="desserts"
       :search="search"
     ></v-data-table>
   </v-card>
+</v-flex>
+</v-layout>
+
 </template>
 <script>
   export default {

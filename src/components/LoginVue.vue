@@ -1,5 +1,5 @@
 <template>
-  <v-app class="indigo lighten-3">
+  <v-app class="purple lighten-3">
     <v-card class="ma-auto" height="580" width="374">
       <v-img
         height="170"

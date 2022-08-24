@@ -1,9 +1,7 @@
 <template>
-  <v-app>
-    <v-main>
-      <router-view/>
-    </v-main>
+  <v-app id="app">
     <DashboardVue v-if="this.$router.currentRoute.name !== 'login'"/>
+    <router-view/>
   </v-app>
 </template>
 
@@ -14,7 +12,7 @@ export default {
   name: 'App',
 
   components: {
-    DashboardVue,
+  
   },
 
   data: () => ({
