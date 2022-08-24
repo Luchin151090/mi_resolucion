@@ -3,14 +3,15 @@
     <v-navigation-drawer
       v-model="drawer"
       app
-      class="grey lighten-2"
+      width="180"
+      class="indigo"
     >
     <v-list-item>
-        <v-list-item-content>
-          <v-list-item-title class="text-h6">
+        <v-list-item-content class="justify-center">
+          <v-list-item-title class="white--text text-h6 justify-center">
             Menu
           </v-list-item-title>
-          <v-list-item-subtitle>
+          <v-list-item-subtitle class="white--text justify-center">
             Ugel-Arequipa-Norte
           </v-list-item-subtitle>
         </v-list-item-content>
@@ -21,19 +22,21 @@
       <v-list
         dense
         nav
+        
       >
         <v-list-item
+          class="purple"
           v-for="item in items"
           :key="item.title"
           link
           @click="$router.push({path:item.route})"
         >
           <v-list-item-icon>
-            <v-icon>{{ item.icon }}</v-icon>
+            <v-icon color="white">{{ item.icon }}</v-icon>
           </v-list-item-icon>
 
-          <v-list-item-content>
-            <v-list-item-title>{{ item.title }}</v-list-item-title>
+          <v-list-item-content >
+            <v-list-item-title class="white--text">{{ item.title }}</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>
