@@ -4,7 +4,7 @@
       v-model="drawer"
       app
       width="180"
-      class="indigo"
+      class="teal lighten-1"
     >
     <v-list-item>
         <v-list-item-content class="justify-center">
@@ -25,7 +25,7 @@
         
       >
         <v-list-item
-          class="purple"
+          class="amber"
           v-for="item in items"
           :key="item.title"
           link
@@ -44,19 +44,19 @@
       <template v-slot:append>
         <div class="pa-2">
           <v-btn block>
-            Logout
+            salir
           </v-btn>
         </div>
       </template>
     </v-navigation-drawer>
 
-    <v-app-bar app class="purple lighten-3">
+    <v-app-bar app class="teal lighten-1">
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
 
-      <v-toolbar-title>BuResol v1.0</v-toolbar-title>
+      <v-toolbar-title class="white--text">BuResol v1.0</v-toolbar-title>
     </v-app-bar>
 
-    <v-main>
+    <v-main class="fondo">
       <HomeVue v-if="this.$router.currentRoute.name !=='cuenta' &&
       $router.currentRoute.name !== 'ajustes' &&
       $router.currentRoute.name !== 'busquedas'
@@ -77,10 +77,15 @@ import HomeVue from './HomeVue.vue';
             { title: "Inicio", icon: "mdi-home",route:'/'},
             { title: "Busquedas", icon: "mdi-magnify",route:'/busquedas'},
             { title: "Cuenta", icon:"mdi-account",route:'/cuenta'},
-            { title: "Ajustes", icon: "mdi-nut",route:'/ajustes'},
         ],
         drawer: null
     }),
     components: { BusquedaVue, HomeVue }
 }
 </script>
+
+<style>
+  .fondo{
+    background: url('https://img.freepik.com/vector-premium/paisaje-natural-fondo-videoconferencia_23-2148642199.jpg?w=2000');
+  }
+</style>

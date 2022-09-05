@@ -1,13 +1,14 @@
 <template>
-  <v-app class="purple lighten-3">
-    <v-card class="ma-auto" height="580" width="374">
+  <v-app>
+    <v-main class="fondo3">
+    <v-card class="ma-auto mt-10" height="620" width="374">
       <v-img
-        height="170"
+        height="30%"
         src="https://thumbs.dreamstime.com/b/plaza-de-armas-arequipa-per%C3%BA-49441219.jpg"
       ></v-img>
-      <v-card-title class="justify-center"> Ugel-BuResol v1.0 </v-card-title>
-      <v-card-title class="purple--text justify-center">Login</v-card-title>
-      <v-form class="ml-5 mr-5">
+      <v-card-title class="mt-0 mb-0 justify-center"> Ugel-BuResol v1.0 </v-card-title>
+      <v-card-title class="amber--text justify-center">Login</v-card-title>
+      <v-form class="mt-0 ml-5 mr-5">
         <v-text-field v-model="nombre" label="Usuario"></v-text-field>
 
         <v-text-field
@@ -18,7 +19,7 @@
 
         <v-btn
           :disabled="valid"
-          color="purple"
+          color="amber"
           block
           class="white--text"
           @click="validate"
@@ -26,11 +27,23 @@
           Acceder
         </v-btn>
 
-        <v-divider class="my-4" ></v-divider>
+        <v-divider class="my-2" ></v-divider>
 
         <v-btn block color="gray" class="mr-4" @click="reset">Registrarse</v-btn>
+        <v-divider class="my-2" ></v-divider>
+          <v-btn
+      block
+      color="blue"
+      class="white--text">¿Olvidaste Contraseña?</v-btn>
       </v-form>
+    
     </v-card>
+    </v-main>
   </v-app>
 </template>
-<script></script>
+<style>
+  .fondo3{
+    width: 100%;
+    background: url('https://img.freepik.com/vector-premium/ilustracion-paisaje-verano-granja-escena-fondo-campo-tierras-cultivo-dibujos-animados-camino-casa-agricultores-traves-campo-hierba-verde-colinas-pradera-pastizales-molinos-viento-paisaje-naturaleza_213110-516.jpg?w=2000');
+  }
+</style>

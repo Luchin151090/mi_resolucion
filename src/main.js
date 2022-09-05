@@ -11,13 +11,38 @@ import LoginVue from './components/LoginVue.vue'
 import BusquedaVue from './components/BusquedaVue.vue'
 import DashboardVue from './components/DashboardVue.vue'
 import HomeVue from './components/HomeVue.vue'
-import AjustesVue from './components/AjustesVue.vue'
 import CuentaVue from './components/CuentaVue.vue'
+import Dash2Vue from './components/Dash2Vue.vue'
+import RegistrarVue from './components/RegistrarVue.vue'
+
 
 const router = new VueRouter({
   mode : 'history',
   base: __dirname,
   routes:[
+    {
+      path:'/admin',
+      name:'admin',
+      component:Dash2Vue,
+      children:[
+        {
+        path:'/admin/busquedas',
+        name:'adbus',
+        component:BusquedaVue
+      },
+      {
+        path:'/admin/cuenta',
+        name:'adcuen',
+        component:CuentaVue
+      },
+      {
+        path:'/admin/administrar',
+        name:'ada',
+        component:RegistrarVue
+      }
+      ]
+    
+    },
     {
       path:'/',
       name:'home',
@@ -33,11 +58,6 @@ const router = new VueRouter({
           path:'/cuenta',
           name:'cuenta',
           component:CuentaVue
-        },
-        {
-          path:'/ajustes',
-          name:'ajustes',
-          component:AjustesVue
         }
       ]
     },

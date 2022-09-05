@@ -1,7 +1,6 @@
 <template>
-<v-layout align-start>
-<v-flex>
-  <v-card fluid>
+
+  <v-card fluid class="ma-5">
     <v-card-title>
       Resoluciones
       <v-spacer></v-spacer>
@@ -14,14 +13,14 @@
       ></v-text-field>
     </v-card-title>
     <v-data-table
-      class="green lighten-3"
+      class="cyan darken-1 white--text"
+      :items-per-page="5"
       :headers="headers"
       :items="desserts"
       :search="search"
     ></v-data-table>
   </v-card>
-</v-flex>
-</v-layout>
+
 
 </template>
 <script>
